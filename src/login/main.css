@@ -1,0 +1,301 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --background-color: #f4f4f8;
+    --text-color: #333;
+    --input-border-color: #ddd;
+    --hover-color: #5a4bff;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.kcLoginClass {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.kcHeaderClass {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.kcHeaderWrapperClass {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kcFormCardClass {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.kcFormHeaderClass {
+    margin-bottom: 20px;
+}
+
+.kcLocaleMainClass {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.kcLocaleDropDownClass {
+    position: relative;
+}
+
+.kcLocaleDropDownClass button {
+    background: none;
+    border: 1px solid var(--input-border-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kcLocaleDropDownClass button:hover {
+    background-color: #f9f9f9;
+}
+
+.kcLocaleListClass {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.kcLocaleDropDownClass:focus-within .kcLocaleListClass {
+    display: block;
+}
+
+.kcLocaleListItemClass {
+    list-style: none;
+    padding: 0;
+}
+
+.kcLocaleItemClass {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.kcLocaleItemClass:hover {
+    background-color: #f0f0f0;
+}
+
+.kcFormGroupClass {
+    margin-bottom: 15px;
+}
+
+.kcLabelClass {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.kcInputClass {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.kcInputClass:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.2);
+}
+
+.kcInputGroup {
+    position: relative;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.kcFormPasswordVisibilityButtonClass:hover {
+    opacity: 1;
+}
+
+.kcFormSettingClass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin-right: 8px;
+}
+
+.kcFormOptionsWrapperClass a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.kcFormOptionsWrapperClass a:hover {
+    text-decoration: underline;
+}
+
+.kcButtonClass {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.kcButtonClass:hover {
+    background: linear-gradient(45deg, var(--hover-color), var(--secondary-color));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kcButtonClass:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.3);
+}
+
+.kcSignUpClass {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.kcSignUpClass a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.kcSignUpClass a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+    .kcLoginClass {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .kcHeaderWrapperClass {
+        font-size: 20px;
+    }
+
+    .kcInputClass {
+        padding: 8px;
+    }
+
+    .kcButtonClass {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+.kcButtonClass {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.kcButtonClass:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kcButtonClass:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.kcButtonClass:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
+}
+
+.kcButtonClass:disabled {
+    background: linear-gradient(45deg, #aaa, #ccc);
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+    opacity: 0.6;
+}
+
+.kcButtonClass:disabled:hover,
+.kcButtonClass:disabled:active {
+    transform: none;
+    box-shadow: none;
+}
+
+#storybook-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
