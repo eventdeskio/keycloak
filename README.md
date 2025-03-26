@@ -1,5 +1,5 @@
 <p align="center">
-    <i>🚀 Eventdesk Custom theme 🚀</i>
+    <i> Eventdesk Custom theme 🚀</i>
     <br/>
     <br/>
 </p>
