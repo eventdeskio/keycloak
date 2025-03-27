@@ -1,10 +1,67 @@
 :root {
-    --primary-color: #6a11cb;
+    --primary-color: #4a8ce3;
     --secondary-color: #2575fc;
     --background-color: #f4f4f8;
     --text-color: #333;
     --input-border-color: #ddd;
     --hover-color: #5a4bff;
+}
+
+#root {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#kc-header {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: #fffdfd;
+    border-bottom: 3px solid #e9ecef;
+    border-radius: 20px;
+}
+
+#kc-header-wrapper {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#kc-header-wrapper span[data-kc-msg="loginTitleHtml"] {
+    font-family:
+        "SF Pro Display",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    display: inline-block;
+}
+
+#kc-header-wrapper span[data-kc-msg="loginTitleHtml"]::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#kc-header-wrapper span[data-kc-msg="loginTitleHtml"]:hover::after {
+    transform: scaleX(1);
 }
 
 body {
@@ -17,11 +74,14 @@ body {
     align-items: center;
     min-height: 100vh;
     line-height: 1.6;
+    background-image: url('/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .kcLoginClass {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -37,7 +97,7 @@ body {
 .kcHeaderWrapperClass {
     font-size: 24px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: black;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -245,6 +305,9 @@ body {
         padding: 10px 15px;
         font-size: 14px;
     }
+    #root{
+        width: 99vw;
+    }
 }
 
 .kcButtonClass {
@@ -278,11 +341,10 @@ body {
     outline: none;
     box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
 }
-
+/* */
 .kcButtonClass:disabled {
     background: linear-gradient(45deg, #aaa, #ccc);
     color: #666;
-    cursor: not-allowed;
     box-shadow: none;
     transform: none;
     opacity: 0.6;
@@ -292,10 +354,23 @@ body {
 .kcButtonClass:disabled:active {
     transform: none;
     box-shadow: none;
-}
+} 
 
 #storybook-root {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.kcLabelWrapperClass {
+    display: flex;
+}
+
+.kcInputErrorMessageClass {
+    color: red;
+}
+
+.required {
+    color: red;
+    margin-right: 2px;
 }
